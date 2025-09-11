@@ -12,7 +12,7 @@
       min-height: 100vh;
       color: #1a202c;
     }
-    /* Cart modal */
+
     .cart-modal {
       position: fixed;
       top: 0; left: 0;
@@ -30,7 +30,7 @@
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    /* Navbar custom */
+
     .menu-toggle {
       display: none;
       font-size: 24px;
@@ -81,11 +81,6 @@
         <li><a href="profil.html" class="px-4 py-2 rounded bg-pink-700" aria-current="page">Profil</a></li>
         <li><a href="produk.html" class="px-4 py-2 rounded hover:bg-pink-500">Produk</a></li>
         <li><a href="kontak.html" class="px-4 py-2 rounded hover:bg-pink-500">Kontak</a></li>
-        <li class="relative">
-          <a href="kerkun.png" class="px-4 py-2 rounded hover:bg-pink-500" onclick="showCart(event)">
-            <img src="kerkun.png" alt="Cart icon" class="inline w-6 h-6 mr-2" /> (<span id="cart-count">0</span>)
-          </a>
-        </li>
       </ul>
     </nav>
   </header>
@@ -103,58 +98,14 @@
 
     <div id="cart-modal" class="cart-modal">
       <div class="cart-content">
-        <h2 class="text-2xl font-bold mb-4 text-pink-800">Your Cart</h2>
+        <h2 class="text-2xl font-bold mb-4 text-pink-800">Keranjang kamu</h2>
         <div id="cart-items"></div>
         <div class="mt-4">
-          <strong>Total: $<span id="cart-total">0.00</span></strong>
+          <strong>Total: <span id="cart-total">0</span></strong>
         </div>
-        <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mt-4" onclick="closeCart()">Close</button>
+        <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mt-4" onclick="closeCart()">tutup</button>
       </div>
     </div>
-
-    <script>
-      let cart = [];
-      const cartCountEl = document.getElementById('cart-count');
-      const cartItemsEl = document.getElementById('cart-items');
-      const cartTotalEl = document.getElementById('cart-total');
-
-      function toggleMenu() {
-        document.getElementById('menu').classList.toggle('show');
-      }
-
-      function showPage(pageId) {
-        document.querySelectorAll('.page').forEach(section => section.style.display = 'none');
-        document.getElementById(pageId).style.display = 'block';
-        if (pageId === 'home') document.getElementById('home').classList.add('fade-in');
-      }
-
-      function showCart() {
-        updateCartDisplay();
-        document.getElementById('cart-modal').style.display = 'block';
-      }
-
-      function closeCart() {
-        document.getElementById('cart-modal').style.display = 'none';
-      }
-
-      function addToCart(name, price) {
-        cart.push({ name, price });
-        cartCountEl.textContent = cart.length;
-        alert('Added to cart!');
-      }
-
-      function updateCartDisplay() {
-        cartItemsEl.innerHTML = '';
-        let total = 0;
-        cart.forEach((item) => {
-          cartItemsEl.innerHTML += `<div class="flex justify-between mb-2"><span>${item.name}</span><span>$${item.price}</span></div>`;
-          total += item.price;
-        });
-        cartTotalEl.textContent = total.toFixed(2);
-      }
-
-      showPage('home');
-    </script>
   </section>
 
   <footer class="bg-pink-600 text-white py-6 mt-12">

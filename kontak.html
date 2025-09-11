@@ -29,7 +29,7 @@
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    /* Navbar responsive */
+
     .menu-toggle {
       display: none;
       font-size: 24px;
@@ -68,7 +68,7 @@
 </head>
 <body class="bg-pink-50">
 
-  <!-- Navbar -->
+
   <header class="bg-pink-600 text-white shadow-lg relative">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">LastSky Premium</h1>
@@ -87,7 +87,7 @@
     </nav>
   </header>
 
-  <!-- Contact Content -->
+
   <main class="container mx-auto px-6 py-12">
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold mb-4 text-pink-800">Hubungi Kami</h2>
@@ -95,12 +95,14 @@
     </div>
     <div class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto text-center">
       <p class="text-gray-600 mb-4">Contact us directly:</p>
-      <a href="https://wa.me/089524031940" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mr-2 inline-block" target="_blank">WhatsApp</a>
+      <a href="https://wa.me/6283875332377" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mr-2 inline-block" target="_blank">WhatsApp</a>
       <a href="https://x.com/lstskyyy?s=11" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 inline-block" target="_blank">Twitter</a>
+      <a href="https://drive.google.com/drive/folders/1nOgKQnIYKJ7zlRSu7T08EDGncmb4EeCr" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 inline-block" target="_blank">Testi</a>
+
     </div>
   </main>
 
-  <!-- Footer -->
+
   <footer class="bg-pink-600 text-white py-6 mt-12">
     <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
       <p class="text-sm">&copy; 2021 LastSky Premium. If you need I'm here.</p>
@@ -114,13 +116,13 @@
     </div>
   </footer>
 
-  <!-- Cart Modal -->
+
   <div id="cart-modal" class="cart-modal">
     <div class="cart-content">
-      <h2 class="text-2xl font-bold mb-4 text-pink-800">Your Cart</h2>
+      <h2 class="text-2xl font-bold mb-4 text-pink-800">Keranjang kamu</h2>
       <div id="cart-items"></div>
       <div class="mt-4">
-        <strong>Total: $<span id="cart-total">0.00</span></strong>
+        <strong>Total: <span id="cart-total">0</span></strong>
       </div>
       <button class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 mr-2" onclick="checkout()">Checkout</button>
       <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" onclick="closeCart()">Close</button>
