@@ -47,10 +47,6 @@
       padding: 0;
     }
     @media (max-width: 768px) {
-      body {
-        background: pink;
-        font-size: 14px;
-      }
       .menu {
         display: none;
         flex-direction: column;
@@ -120,5 +116,11 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
