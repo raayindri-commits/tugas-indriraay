@@ -125,7 +125,7 @@
         <strong>Total: <span id="cart-total">0</span></strong>
       </div>
       <button class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 mr-2" onclick="checkout()">Checkout</button>
-      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" onclick="closeCart()">Close</button>
+      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" onclick="closeCart()">Kembali</button>
     </div>
   </div>
 
@@ -164,7 +164,7 @@
     }
 
     function checkout() {
-      alert('Checkout successful! Thank you for your purchase.');
+      alert('berhasil di checkout.');
       cart = [];
       updateCartCount();
       closeCart();
